@@ -1,3 +1,5 @@
 .DS_Store
 .rest
+.env
+requests/
 node_modules/

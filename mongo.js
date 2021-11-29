@@ -28,11 +28,13 @@ const person = new Person({
   number: `${number}`,
 });
 
+//Return a number through the console
 person.save().then((result) => {
   console.log(`added ${name} number ${number} to phonebook`);
   mongoose.connection.close();
 });
 
+//Return a list of numbers in the phone book in the console
 if (password) {
   Person.find({}).then((result) => {
     result.forEach((person) => {
