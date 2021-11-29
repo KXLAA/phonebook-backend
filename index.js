@@ -47,15 +47,15 @@ app.get("/api/persons", (request, response) => {
   });
 });
 
-app.get("/info", (request, response) => {
-  const date = new Date();
-  response.send(`<div>
-   <p>Phonebook has info for ${persons.length} ${
-    persons.length === 1 ? "person" : "people"
-  }</p>
-   <p>${date}</p>
-   </div>`);
-});
+// app.get("/info", (request, response) => {
+//   const date = new Date();
+//   response.send(`<div>
+//    <p>Phonebook has info for ${persons.length} ${
+//     persons.length === 1 ? "person" : "people"
+//   }</p>
+//    <p>${date}</p>
+//    </div>`);
+// });
 
 app.get("/api/persons/:id", (request, response) => {
   Person.findById(request.params.id).then((person) => {
@@ -71,15 +71,15 @@ app.get("/api/persons/:id", (request, response) => {
   // }
 });
 
-app.delete("/api/persons/:id", (request, response) => {
-  const id = Number(request.params.id);
-  persons = persons.filter((person) => person.id !== id);
-  response.status(204).end();
-});
+// app.delete("/api/persons/:id", (request, response) => {
+//   const id = Number(request.params.id);
+//   persons = persons.filter((person) => person.id !== id);
+//   response.status(204).end();
+// });
 
 app.post("/api/persons", (request, response) => {
   const body = request.body;
-  const existingName = persons.find((person) => person.name === body.name);
+  // const existingName = persons.find((person) => person.name === body.name);
 
   if (body.name === undefined) {
     return response.status(404).json({
@@ -93,11 +93,11 @@ app.post("/api/persons", (request, response) => {
     });
   }
 
-  if (body.name === existingName) {
-    return response.status(404).json({
-      error: "name must be unique",
-    });
-  }
+  // if (body.name === existingName) {
+  //   return response.status(404).json({
+  //     error: "name must be unique",
+  //   });
+  // }
 
   const person = new Person({
     name: body.name,
