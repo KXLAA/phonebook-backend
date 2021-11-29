@@ -1,1 +1,1 @@
-POST  http://localhost:3001/api/persons
+DELETE http://localhost:3001/api/persons/61a4c8a8e4a289e88f135c01
