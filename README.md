@@ -1,5 +1,5 @@
 # Phonebook backend
-- Live Backend: [Phonebook backend](https://phonebook-backend-full-stack-o.herokuapp.com/)
+- Live Backend: [Phonebook backend](https://phonebook-backend-full-stack-o.herokuapp.com/api/persons)
 - Live Full Stack: [Full stack Build](https://phonebook-backend-full-stack-o.herokuapp.com/)
 
 This project is part of the exercises of Full Stack Open 2021.
