@@ -1,11 +1,14 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const mongoose = require("mongoose");
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const uniqueValidator = require("mongoose-unique-validator");
 
+// eslint-disable-next-line no-undef
 const url = process.env.MONGODB_URI;
 
 mongoose
   .connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then((result) => {
+  .then(() => {
     console.log("connected to MongoDB");
   })
   .catch((error) => {
